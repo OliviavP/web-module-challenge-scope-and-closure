@@ -31,14 +31,15 @@ console.log('example task:', processFirstItem(['foo','bar'],function(str){return
   
   1. What is the difference between counter1 and counter2?
 
-  //counter1 is a variable and counter2 is a function.
+  //counter1 is using a function inside a function and then invoking counterMaker, and counter2 is just a function.
 
   2. Which of the two uses a closure? How can you tell?
 
-  //counter2, because there is a variable outside of the function.
+  //counter1, because it invokes the function outside of the function.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     Counter1 is preferred if you need to use it multiple times, where the count variables would be different instances, where you would use counter 2 if there weren't individually scoped values.
 */
 
 // counter1 code
